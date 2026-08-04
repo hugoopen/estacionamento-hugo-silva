@@ -1,13 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <title>estacionamento senac</title>
+    <title>Estacionamento Senac</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <img src="Assets - projeto estacionamento/Professional parking facility background.png" alt="FOTO DA TELA DE ACESSO" style="width:900;height: 900";>
+    <div class="login-container">
+        <img src="Assets - projeto estacionamento/Professional parking facility background.png" alt="FOTO DA TELA DE ACESSO" class="bg-imagem">
+
+        <div class="login-form-side"> 
+            <h2>Gestão de Estacionamento</h2>
+        </div>
+
+        <!-- CORRIGIDO: Atributo class movido para dentro da tag main -->
+        <main class="login-form-side">
+            <form action="/enviar" method="post" class="data-form">
+                <h2>Senac CEP Papaléo</h1>
+                <h3>Gestão de Estacionamento</h2>
+
+                <!-- CORRIGIDO: Atributo class movido para dentro da tag div -->
+                <div class="form-group">
+                    <label for="documento">CPF ou CNPJ</label>
+                    <!-- AJUSTADO: Mudado 'nome' para 'name', tipo para password na senha e removido espaços dos IDs -->
+                    <input type="text"  required placeholder="000.000.000-00">
+                </div>
+
+                <!-- CORRIGIDO: Atributo class movido para dentro da tag div -->
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <input type="password"  required placeholder="*******">
+                </div>
+
+                <!-- CORRIGIDO: Atributo type movido para dentro da tag button -->
+                <button type="submit">Entrar</button>
+            </form>
+        </main>
+    </div>
 </body>
-
-
 </html>
