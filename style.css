@@ -2,9 +2,7 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: (255, 255, 255, 1);
+    box-sizing: border-box; 
 }
 
 .login-container {
@@ -23,30 +21,62 @@
 .login-form-side{
     width: 30%;
     height: 100vh;
-    background-color: #ffffff;
-
+    background-color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    position: relative;
 }
-.box-login{
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 40;
+}
+
+.input-wrapper{
     width: 100%;
-    max-width: 300px;
-    height: 400px;
-    background-color: #ffffff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px 10px;
+    background-color: #fff;
 }
 
+.input-icon{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
 
+.input-wrapper input{
+    border: none;
+    outline: none;
+    width: 100%;
+}
 
+.texto-login{
+    position: absolute;
+    top: 250px;
+    left: 0;
+    width: 100%;
+    color: blue;
+}
 
+.texto-login h1{
+    text-align: center;
+    margin: 0;
+}
 
-
+.title-name .subtitulo{
+    font-size: 2.0rem;
+    font-weight: 700;
+    color: grey;
+    text-align: center;
+    margin-top: 0;
+}
 
 
 
