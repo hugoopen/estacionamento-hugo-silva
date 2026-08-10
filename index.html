@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <style>
-        body{
+        body {
             font: normal 16px Arial, Verdana, serif;
         }
     </style>
@@ -14,49 +14,67 @@
 <body>
     <header>
         <div class="login-container">
-        <img src="Assets - projeto estacionamento/Professional parking facility background.png" alt="fachada do estacionamento do Senac" class="bg-imagem">
-            <div class="text-information">
 
-            </div>
+            <!-- COLUNA DA ESQUERDA (70%) -->
+            <div class="imagem-wrapper">
+                <img src="Assets - projeto estacionamento/Professional parking facility background.png" alt="fachada do estacionamento do Senac" class="bg-imagem">
 
-      <main class="login-form-side">
-            <div class="title-name">
-                <div class="texto-login"><h1>Senac CEP Papaléo</h1>
-                    <p class="subtitulo">Gestão de Estacionamento</p>
+                <div class="texto-imagem">
+                    <h4>
+                        <img src="Assets - projeto estacionamento/Icon-carro.svg"alt="ícone de carrinho" class="icon-titulo">
+                        Status em Tempo Real</h4>
+                    <p>O sistema Papaléo Parking otimiza o fluxo de entrada e
+                    saída, garantindo segurança e agilidade para o Senac CEP.</p>
                 </div>
-            </div>
+            </div> <!-- 🌟 CORREÇÃO: Fecha a coluna da esquerda aqui -->
+
+            <!-- COLUNA DA DIREITA (30%) -->
+            <main class="login-form-side">
+                <div class="title-name">
+                    <div class="texto-login">
+                        <h1>Senac CEP Papaléo</h1>
+                        <p class="subtitulo">Gestão de Estacionamento</p>
+                    </div>
+                </div>
+                    
+                <form action="" method="post">
+                    <!-- Campo Documento -->
+                    <div class="input-container">
+                        <label for="documento">CPF ou CNH</label>
+                        <div class="input-wrapper">
+                            <img src="Assets - projeto estacionamento/Icon-cracha.svg" alt="ícone de cadastro" class="input-icon">
+                            <input type="text" id="documento" placeholder="000.000.000-00" required>
+                        </div>
+                    </div>
+
+                    <!-- Campo Senha -->
+                    <div class="input-container">
+                        <label for="senha">Senha</label>
+                        <div class="input-wrapper">
+                            <img src="Assets - projeto estacionamento/Icon-cadeado.svg" alt="ícone de cadeado(senha)" class="input-icon">
+                            <input type="password" id="senha" placeholder="*******" required>
+                            <img src="Assets - projeto estacionamento/Icon-eye.svg" alt="ícone de visibilidade(senha)" class="input-icon">
+                        </div>
+                    </div>
+
+                    <!-- Campo Lembrar -->
+                    <div class="remember-group">
+                        <input type="checkbox" id="lembrar" name="lembrar">
+                        <label for="lembrar">Lembrar neste dispositivo</label>
+                    </div>
+
+                    <button type="submit">Entrar</button>
+                </form>
+
                 
-            <form action="" method="post">
-                <!--Campo Documento-->
-                <div class="input-container">
-                    <label for="documento">CPF ou CNPJ</label>
-                    <div class="input-wrapper">
-                        <img src="Assets - projeto estacionamento/Icon-cracha.svg" alt="ícone de cadastro" class="input-icon">
-                        <input type="text" id="documento" placeholder="000.000.000-00" required>
+                <div class="text-information">
+                    <div class="texto-final">
+                        <p>Todos os direitos reservados.</p>
                     </div>
                 </div>
+            </main>
 
-                 <!--Campo Documento-->
-                <div class="input-container">
-                    <label for="senha">Senha</label>
-                    <div class="input-wrapper">
-                        <img src="Assets - projeto estacionamento/Icon-cadeado.svg" alt="ícone de cadeado(senha)" class="input-icon">
-                        <input type="password" id="senha" placeholder="*******" required>
-                    </div>
-                </div>
-
-                 <!--Campo Documento-->
-                <div class="remember-group">
-                    <input type="checkbox" id="lembrar" name="lembrar">
-                    <label for="lembrar">Lembrar neste dispositivo</label>
-                </div>
-
-                <button type="submit"> 
-                    Entrar
-                </button>
-            </form>
-    </header>
-      </main>
+        </div> <!-- 🌟 CORREÇÃO: Fecha a login-container -->
+    </header> <!-- 🌟 CORREÇÃO: Fecha a header por último -->
 </body>
 </html>
-
