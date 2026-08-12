@@ -1,0 +1,134 @@
+:root{--cor-primaria-rgb:rgb(13, 13, 175);
+    --cor-texto-secundario: gray;
+    --cor-branca: #ffffff;
+}
+    
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+body{
+    height: 100vh;
+}
+.perfil-do-administrador{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:flex-end;
+    width: 100%;
+    gap: 8px;
+}
+
+.icon-perfil-do-administrador{
+    order: 2;
+}
+
+.info-administrador{
+    display: flex;
+    flex-direction: column;
+    order: 1;
+    
+}
+
+.titulo-admin{
+    font-size: 16px;
+}
+
+.cargo-admin{
+    display: flex;
+    margin-left: auto;
+    font-size: 13px;
+}
+
+.barra-vertical-do-administrador{
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    border-left: 2px solid black;
+    margin-left: auto;
+
+}
+
+nav.menu-lateral{
+    width: 300px;
+    height: 100%;
+    background-color: #ffff;
+    padding: 40px 0 40px 1%;
+    flex-grow: 1;
+}
+
+ul{
+    height: 100%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+ul li.item-menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon-menu{
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background-color: gray;
+
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+}
+.Icon-dashboard{
+    -webkit-mask-image: url("Assets - projeto estacionamento/Icon-dashboard.svg");
+    mask-image: url("Assets - projeto estacionamento/Icon-dashboard.svg");
+}
+
+.Icon-consultar-usuarios{
+    -webkit-mask-image: url("Assets - projeto estacionamento/Icon-consultar-usuarios.svg");
+    mask-image: url("Assets - projeto estacionamento/Icon-consultar-usuarios.svg");
+}
+
+.Icon-registrar-entradas-e-saidas{
+    -webkit-mask-image: url("Assets - projeto estacionamento/Icon-registrar-entradas-e-saidas.svg");
+    mask-image: url("Assets - projeto estacionamento/Icon-registrar-entradas-e-saidas.svg");
+}
+
+.Icon-cadastro-rapido{
+    -webkit-mask-image: url("Assets - projeto estacionamento/Icon-cadastro-rapido.svg");
+    mask-image: url("Assets - projeto estacionamento/Icon-cadastro-rapido.svg");
+}
+
+.Icon-historico{
+    -webkit-mask-image: url("Assets - projeto estacionamento/Icon-historico.svg");
+    mask-image: url("Assets - projeto estacionamento/Icon-historico.svg");
+}
+
+.Icon-alertas{
+    -webkit-mask-image: url("Assets - projeto estacionamento/Icon-alertas.svg");
+    mask-image: url("Assets - projeto estacionamento/Icon-alertas.svg");
+}
+
+.Icon-sair{
+    -webkit-mask-image: url("Assets - projeto estacionamento/Icon-sair.svg");
+    mask-image: url("Assets - projeto estacionamento/Icon-sair.svg");
+    background-color: red;
+}
+
+.Item-Sair{
+    margin-top: auto;
+}
