@@ -12,9 +12,7 @@
   box-sizing: border-box;
 }
 
-/* ==========================================================================
-   1. ESTRUTURA BASE (Para Celulares e Telas Pequenas)
-   ========================================================================== */
+/* 1. ESTRUTURA BASE (Para Celulares e Telas Pequenas) */
 html, body {
   min-height: 100vh;
   background-color: var(--cor-branca);
@@ -60,10 +58,10 @@ header {
 }
 
 .barra-vertical-do-administrador {
-  height: 50px;
+  height: 30px;
   display: flex;
   justify-content: flex-end;
-  border-left: 2px solid var(--cor-secundario);
+  border-left: 1.5px solid var(--cor-secundario);
 }
 
 /* Menu Lateral adaptado para telas menores */
@@ -190,9 +188,7 @@ ul li.item-menu:hover {
 }
 
 
-/* ==========================================================================
-   2. ESTRUTURA PARA TELAS GRANDES (Computadores e Notebooks)
-   ========================================================================== */
+/* 2. ESTRUTURA PARA TELAS GRANDES (Computadores e Notebooks) */
 @media (min-width: 768px) {
   html, body {
     height: 100vh;
