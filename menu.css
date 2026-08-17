@@ -75,17 +75,35 @@ ul {
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
   line-height: 20px;
+  height: 100%;
+}
+
+ul li.item-menu a{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  color: var(--cor-secundario);
+  padding: 5px;
+  line-height: 20px;
+}
+
+ul li.item-menu a .txt-link{
+  margin-left: 20px;
+}
+
+ul li.item-menu a .icon-menu{
+  font-size: 30px;
 }
 
 ul li.item-menu {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 30px;
   transition: 0.2s;
-  padding: 10px;
+  padding: 5px;
   border-radius: 4px;
 }
 
@@ -110,7 +128,6 @@ ul li.item-menu:hover {
 .conteudo-item {
   display: flex;
   align-items: center;
-  gap: 10px;
 }
 
 /* Ícones do Menu */
@@ -203,7 +220,7 @@ ul li.item-menu:hover {
     width: calc(100% - 225px); /* Desconta o espaço do menu lateral */
     height: 60px;
     border-bottom: 2px solid var(--cor-secundario);
-    padding: 0 30px;
+    padding: 0 40px;
     z-index: 10;
   }
 
@@ -216,7 +233,7 @@ ul li.item-menu:hover {
     left: 0;
     border-right: 2px solid var(--cor-secundario);
     border-bottom: none;
-    padding: 40px 0 40px 1%;
+    padding: 80px 0 40px 1%;
     display: flex;
     flex-direction: column;
   }

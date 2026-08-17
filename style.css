@@ -186,9 +186,10 @@ button[type="submit"]:hover{
     width: 24px;
     height: 24px;
 }
-@media (max-width: 768px){
+@media (min-width: 768px){
     .login-container {
-        flex-direction: column;
+        min-height: 100vh;
+        flex-direction: row;
     }
 
     .login-form-side{
