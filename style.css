@@ -185,21 +185,53 @@ button[type="submit"]:hover{
 .icon-titulo{
     width: 24px;
     height: 24px;
+
+    /*Para telas maiores, tentando entender como configurar e os porquês*/
 }
-@media (min-width: 768px){
+@media (max-width: 768px){
     .login-container {
-        min-height: 100vh;
         flex-direction: row;
+        height: 100vh;
+    }
+    
+    .imagem-wrapper{
+        display: block;
+        width: 70%;
+        height: 100vh;
     }
 
     .login-form-side{
         width: 30%;
-    }
-    
-    .imagem-wrapper{
-        width: 70%;
+        height: 100vh;
+        padding: 40px 35px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
     }
 
+    .title-name{
+        margin-top: 0;
+        width: 100%;
+    }
+
+    .texto-login h1{
+        font-size: 2rem;
+        margin: 0 0 10px 0;
+    }
+
+    .title-name .subtitulo{
+        font-size: 1.2rem;
+        margin: 0;
+    }
+
+    .text-information{
+        margin-top: auto;
+        margin-bottom: 0;
+
+    }
 }
 
 
