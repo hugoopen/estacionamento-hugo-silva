@@ -48,7 +48,7 @@
     max-width: 485px;
 }
 
-.texto-imagem h4{
+.texto-imagem h2{
     margin: 0 0 5px 0;
     font-size: 2.0rem;
     color: var(--cor-primaria);
@@ -190,10 +190,15 @@ button[type="submit"]:hover{
     .login-container {
         flex-direction: column;
     }
-    .imagem-wrapper,
+
     .login-form-side{
-        width: 100%;
+        width: 30%;
     }
+    
+    .imagem-wrapper{
+        width: 70%;
+    }
+
 }
 
 
