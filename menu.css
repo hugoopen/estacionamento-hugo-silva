@@ -12,22 +12,28 @@
   box-sizing: border-box;
 }
 
-/* 1. ESTRUTURA BASE (Para Celulares e Telas Pequenas) */
 html, body {
-  min-height: 100vh;
+  height: 100vh;
   background-color: var(--cor-branca);
   font-family: sans-serif;
+  overflow: hidden; /* Evita rolagem na página inteira no monitor */
 }
 
-/* No celular, o cabeçalho fica no topo horizontalmente */
+/* CABEÇALHO (HEADER) - DESKTOP */
 header {
   display: flex;
   flex-direction: row; 
   align-items: center;
   justify-content: flex-end;
-  padding: 15px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: calc(100% - 225px); /* Desconta a largura da barra lateral */
+  height: 60px;
+  padding: 0 40px;
   background-color: var(--cor-branca);
   border-bottom: 2px solid var(--cor-secundario);
+  z-index: 10;
 }
 
 .perfil-do-administrador {
@@ -64,11 +70,18 @@ header {
   border-left: 1.5px solid var(--cor-secundario);
 }
 
-/* Menu Lateral adaptado para telas menores */
+/* MENU LATERAL (SIDEBAR) - DESKTOP */
 nav.menu-lateral {
-  width: 100%;
+  width: 225px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
   background-color: var(--cor-branca);
-  padding: 20px 5%;
+  border-right: 2px solid var(--cor-secundario);
+  padding: 80px 0 40px 1%;
+  display: flex;
+  flex-direction: column;
 }
 
 ul {
@@ -78,24 +91,6 @@ ul {
   gap: 20px;
   line-height: 20px;
   height: 100%;
-}
-
-ul li.item-menu a{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  text-decoration: none;
-  color: var(--cor-secundario);
-  padding: 5px;
-  line-height: 20px;
-}
-
-ul li.item-menu a .txt-link{
-  margin-left: 20px;
-}
-
-ul li.item-menu a .icon-menu{
-  font-size: 30px;
 }
 
 ul li.item-menu {
@@ -109,6 +104,25 @@ ul li.item-menu {
 
 ul li.item-menu:hover {
   background: var(--cursor-ativo);
+}
+
+ul li.item-menu a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  color: var(--cor-secundario);
+  padding: 5px;
+  line-height: 20px;
+}
+
+ul li.item-menu a .txt-link {
+  margin-left: 20px;
+}
+
+.conteudo-item {
+  display: flex;
+  align-items: center;
 }
 
 .icon-menu {
@@ -125,12 +139,7 @@ ul li.item-menu:hover {
   mask-size: contain;
 }
 
-.conteudo-item {
-  display: flex;
-  align-items: center;
-}
-
-/* Ícones do Menu */
+/* Ícones Mapeados */
 .Icon-dashboard {
   -webkit-mask-image: url("Assets - projeto estacionamento/Icon-dashboard.svg");
   mask-image: url("Assets - projeto estacionamento/Icon-dashboard.svg");
@@ -167,13 +176,14 @@ ul li.item-menu:hover {
   background-color: var(--cor-icon-sair);
 }
 
-/* Gaveta que guarda a barra cinza e o botão Sair */
+/* Rodapé do Menu (Barra + Botão Sair) */
 .container-rodape {
+  margin-top: auto;
+  padding-bottom: 20px;
   display: flex;
   flex-direction: column;
   gap: 15px;
   width: 100%;
-  margin-top: 30px; /* No celular, apenas um espaçamento simples */
 }
 
 .barra-sair {
@@ -181,7 +191,6 @@ ul li.item-menu:hover {
   border-top: 2px solid var(--cor-secundario);
 }
 
-/* Estilo do botão Sair isolado do hover da barra */
 .link-sair {
   display: flex;
   flex-direction: row;
@@ -199,63 +208,12 @@ ul li.item-menu:hover {
   background: var(--cursor-ativo);
 }
 
-/* Área do conteúdo em telas pequenas */
+/* ÁREA DO CONTEÚDO PRINCIPAL (ONDE VOCÊ VAI TRABALHAR AGORA) */
 .conteudo-principal {
-  padding: 20px;
-}
-
-
-/* 2. ESTRUTURA PARA TELAS GRANDES (Computadores e Notebooks) */
-@media (min-width: 768px) {
-  html, body {
-    height: 100vh;
-    overflow: hidden; /* Trava rolagens fantasmas no monitor */
-  }
-
-  /* No computador, o cabeçalho flutua no topo direito */
-  header {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: calc(100% - 225px); /* Desconta o espaço do menu lateral */
-    height: 60px;
-    border-bottom: 2px solid var(--cor-secundario);
-    padding: 0 40px;
-    z-index: 10;
-  }
-
-  /* A barra lateral ocupa 100% da altura física da tela */
-  nav.menu-lateral {
-    width: 225px;
-    height: 100vh; /* Força os 100% perfeitos do teto ao chão */
-    position: fixed;
-    top: 0;
-    left: 0;
-    border-right: 2px solid var(--cor-secundario);
-    border-bottom: none;
-    padding: 80px 0 40px 1%;
-    display: flex;
-    flex-direction: column;
-  }
-
-  ul {
-    height: 100%; /* Permite que o Flexbox empurre a gaveta para o fundo */
-  }
-
-  /* A mola elástica agora age na gaveta, empurrando a barra E o botão Sair */
-  .container-rodape {
-    margin-top: auto; 
-    padding-bottom: 20px;
-  }
-
-  /* 🟢 ALINHAMENTO DO CONTEÚDO DO SITE:
-     Abre espaço para não sumir atrás do menu fixed e do header absolute */
-  .conteudo-principal {
-    margin-left: 225px; /* Tamanho exato do menu lateral */
-    padding-top: 80px;  /* Altura segura para descolar do cabeçalho */
-    padding-left: 40px;
-    padding-right: 40px;
-    height: 100vh;
-    overflow-y: auto; /* Se a tabela de carros for grande, ela rola apenas aqui dentro */
-  }
+  margin-left: 225px; /* Abre espaço exato para não ficar atrás do menu fixed */
+  padding-top: 80px;  /* Descola do header que está com position absolute */
+  padding-left: 40px;
+  padding-right: 40px;
+  height: 100vh;
+  overflow-y: auto;   /* Habilita rolagem apenas no conteúdo se a tabela for grande */
 }
