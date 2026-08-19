@@ -19,7 +19,7 @@ html, body {
   overflow: hidden; /* Evita rolagem na página inteira no monitor */
 }
 
-/* CABEÇALHO (HEADER) - DESKTOP */
+/* CABEÇALHO (HEADER) */
 header {
   display: flex;
   flex-direction: row; 
@@ -70,7 +70,7 @@ header {
   border-left: 1.5px solid var(--cor-secundario);
 }
 
-/* MENU LATERAL (SIDEBAR) - DESKTOP */
+/* MENU LATERAL (SIDEBAR) */
 nav.menu-lateral {
   width: 225px;
   height: 100vh;
