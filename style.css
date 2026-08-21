@@ -188,28 +188,23 @@ button[type="submit"]:hover{
 
     /*Para telas maiores, tentando entender como configurar e os porquês*/
 }
-@media (max-width: 768px){
+@media (max-width: 769px){
     .login-container {
-        flex-direction: row;
+        flex-direction: column;
+        height: auto;
         height: 100vh;
     }
     
     .imagem-wrapper{
-        display: block;
-        width: 70%;
-        height: 100vh;
+        display: none;
     }
 
     .login-form-side{
-        width: 30%;
-        height: 100vh;
-        padding: 40px 35px;
-
-        display: flex;
-        flex-direction: column;
+        width: 100%;
+        min-height: 100vh;
+        padding: 30px 20px;
         justify-content: center;
-        align-items: center;
-        gap: 30px;
+        gap: 20px;
     }
 
     .title-name{
@@ -228,7 +223,7 @@ button[type="submit"]:hover{
     }
 
     .text-information{
-        margin-top: auto;
+        margin-top: 20px;
         margin-bottom: 0;
 
     }
