@@ -70,6 +70,58 @@ header {
   border-left: 1.5px solid var(--cor-secundario);
 }
 
+.icon-apresentacao{
+  display: inline-flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+.apresentacao{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+}
+
+.nome-titulo{
+  color: var(--cor-primaria-rgb);
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.text-subtitule{
+  margin: 4px 0 0 0;
+  font-size: 0.8;
+  line-height: 1;
+}
+
+.balao-icon{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cor-primaria-rgb);
+  border: 2px solid var(--cor-primaria-rgb);
+  border-radius: 4px;
+  padding: 10px;
+  flex-shrink: 0;
+}
+.icon-de-apresentacao {
+  filter: brightness(0) invert(1); /* Correção da imagem: Força o ícone escuro a ficar branco puro */
+  width: 24px;  /* Ajuste de tamanho padrão para ícones de tela */
+  height: 24px;
+  display: block;
+}
+
+
 /* MENU LATERAL (SIDEBAR) */
 nav.menu-lateral {
   width: 225px;
@@ -79,7 +131,7 @@ nav.menu-lateral {
   left: 0;
   background-color: var(--cor-branca);
   border-right: 2px solid var(--cor-secundario);
-  padding: 80px 0 40px 1%;
+  padding: 20px 0 50px 1%;
   display: flex;
   flex-direction: column;
 }
@@ -187,7 +239,7 @@ ul li.item-menu a .txt-link {
 }
 
 .barra-sair {
-  width: 90%;
+  width: 95%;
   border-top: 2px solid var(--cor-secundario);
 }
 
@@ -216,4 +268,12 @@ ul li.item-menu a .txt-link {
   padding-right: 40px;
   height: 100vh;
   overflow-y: auto;   /* Habilita rolagem apenas no conteúdo se a tabela for grande */
+}
+
+.conteudo-principal h1{
+  font-size: 2.5rem;
+}
+
+.conteudo-principal p{
+  font-size: 1.0rem;
 }
