@@ -74,7 +74,7 @@ header {
 .icon-apresentacao{
   display: inline-flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   gap: 12px;
   margin: 20px;
   width: 100%;
@@ -83,7 +83,7 @@ header {
 .apresentacao{
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: flex-end;
   margin: 0;
   padding: 0;
 }
